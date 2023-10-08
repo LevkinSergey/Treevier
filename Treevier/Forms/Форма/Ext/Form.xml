@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПутьККонфигурации" id="1">
+			<DataPath>ПутьККонфигурации</DataPath>
+			<ContextMenu name="ПутьККонфигурацииКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПутьККонфигурацииРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="Группа3" id="63">
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<Page name="Конфигурация" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфигурация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфигурация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КонфигурацияРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="43">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<Button name="Сформировать" id="20">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.Сформировать</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="21"/>
+								</Button>
+								<Button name="Трассировка" id="45">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.Трассировка</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ТрассировкаРасширеннаяПодсказка" id="46"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="25">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<Table name="ДеревоКонфиуграции" id="4">
+									<Representation>Tree</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДеревоКонфиуграции</DataPath>
+									<ContextMenu name="ДеревоКонфиуграцииКонтекстноеМеню" id="5"/>
+									<AutoCommandBar name="ДеревоКонфиуграцииКоманднаяПанель" id="6">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоКонфиуграцииРасширеннаяПодсказка" id="7"/>
+									<SearchStringAddition name="ДеревоКонфиуграцииСтрокаПоиска" id="8">
+										<AdditionSource>
+											<Item>ДеревоКонфиуграции</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКонфиуграцииСтрокаПоискаКонтекстноеМеню" id="9"/>
+										<ExtendedTooltip name="ДеревоКонфиуграцииСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоКонфиуграцииСостояниеПросмотра" id="11">
+										<Enabled>false</Enabled>
+										<AdditionSource>
+											<Item>ДеревоКонфиуграции</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКонфиуграцииСостояниеПросмотраКонтекстноеМеню" id="12"/>
+										<ExtendedTooltip name="ДеревоКонфиуграцииСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоКонфиуграцииУправлениеПоиском" id="14">
+										<AdditionSource>
+											<Item>ДеревоКонфиуграции</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКонфиуграцииУправлениеПоискомКонтекстноеМеню" id="15"/>
+										<ExtendedTooltip name="ДеревоКонфиуграцииУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<PictureField name="ДеревоКонфиуграцииКартинка" id="79">
+											<DataPath>ДеревоКонфиуграции.Картинка</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоКонфиуграцииКартинкаКонтекстноеМеню" id="80"/>
+											<ExtendedTooltip name="ДеревоКонфиуграцииКартинкаРасширеннаяПодсказка" id="81"/>
+										</PictureField>
+										<InputField name="ДеревоКонфиуграцииИмя" id="17">
+											<DataPath>ДеревоКонфиуграции.Имя</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоКонфиуграцииИмяКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ДеревоКонфиуграцииИмяРасширеннаяПодсказка" id="19"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<TextDocumentField name="ДеревоКонфиуграцииТекстМодуля" id="22">
+									<DataPath>Items.ДеревоКонфиуграции.CurrentData.ТекстМодуля</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ДеревоКонфиуграцииТекстМодуляКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ДеревоКонфиуграцииТекстМодуляРасширеннаяПодсказка" id="24"/>
+								</TextDocumentField>
+								<Table name="СписокИменОбращений" id="27">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>СписокИменОбращений</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СписокИменОбращенийКонтекстноеМеню" id="28"/>
+									<AutoCommandBar name="СписокИменОбращенийКоманднаяПанель" id="29">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокИменОбращенийРасширеннаяПодсказка" id="30"/>
+									<SearchStringAddition name="СписокИменОбращенийСтрокаПоиска" id="31">
+										<AdditionSource>
+											<Item>СписокИменОбращений</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИменОбращенийСтрокаПоискаКонтекстноеМеню" id="32"/>
+										<ExtendedTooltip name="СписокИменОбращенийСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокИменОбращенийСостояниеПросмотра" id="34">
+										<AdditionSource>
+											<Item>СписокИменОбращений</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИменОбращенийСостояниеПросмотраКонтекстноеМеню" id="35"/>
+										<ExtendedTooltip name="СписокИменОбращенийСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокИменОбращенийУправлениеПоиском" id="37">
+										<AdditionSource>
+											<Item>СписокИменОбращений</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИменОбращенийУправлениеПоискомКонтекстноеМеню" id="38"/>
+										<ExtendedTooltip name="СписокИменОбращенийУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="СписокИменОбращенийЗначение" id="40">
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокИменОбращенийЗначениеКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="СписокИменОбращенийЗначениеРасширеннаяПодсказка" id="42"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТрассировка" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Трассировка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница трассировка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаТрассировкаРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<Table name="ДеревоТрассировки" id="47">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоТрассировки</DataPath>
+							<ContextMenu name="ДеревоТрассировкиКонтекстноеМеню" id="48"/>
+							<AutoCommandBar name="ДеревоТрассировкиКоманднаяПанель" id="49">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоТрассировкиРасширеннаяПодсказка" id="50"/>
+							<SearchStringAddition name="ДеревоТрассировкиСтрокаПоиска" id="51">
+								<AdditionSource>
+									<Item>ДеревоТрассировки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТрассировкиСтрокаПоискаКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ДеревоТрассировкиСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоТрассировкиСостояниеПросмотра" id="54">
+								<AdditionSource>
+									<Item>ДеревоТрассировки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТрассировкиСостояниеПросмотраКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ДеревоТрассировкиСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоТрассировкиУправлениеПоиском" id="57">
+								<AdditionSource>
+									<Item>ДеревоТрассировки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТрассировкиУправлениеПоискомКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ДеревоТрассировкиУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДеревоТрассировкиМетод" id="60">
+									<DataPath>ДеревоТрассировки.Метод</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоТрассировкиМетодКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ДеревоТрассировкиМетодРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<CheckBoxField name="ДеревоТрассировкиПоказывать" id="72">
+									<DataPath>ДеревоТрассировки.Показывать</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоТрассировкиПоказыватьКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ДеревоТрассировкиПоказыватьРасширеннаяПодсказка" id="74"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Группа4" id="77">
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<HTMLDocumentField name="КартаТрассивровки" id="69">
+									<DataPath>КартаТрассивровки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="КартаТрассивровкиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="КартаТрассивровкиРасширеннаяПодсказка" id="71"/>
+								</HTMLDocumentField>
+								<UsualGroup name="Группа5" id="82">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="83"/>
+									<ChildItems>
+										<Button name="ОбновитьКарту" id="75">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОбновитьКарту</CommandName>
+											<ExtendedTooltip name="ОбновитьКартуРасширеннаяПодсказка" id="76"/>
+										</Button>
+										<Button name="ПрибавитьЗум" id="84">
+											<Type>UsualButton</Type>
+											<Width>4</Width>
+											<CommandName>Form.Command.ПрибавитьЗум</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>+</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПрибавитьЗумРасширеннаяПодсказка" id="85"/>
+										</Button>
+										<Button name="УбавитьЗум" id="86">
+											<Type>UsualButton</Type>
+											<Width>4</Width>
+											<CommandName>Form.Command.УбавитьЗум</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>-</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УбавитьЗумРасширеннаяПодсказка" id="87"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.Treevier</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПутьККонфигурации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоКонфиуграции" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево конфиуграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстМодуля" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст модуля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВызываемого" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор вызываемого</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уровень" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокИменОбращений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список имен обращений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Значение" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоТрассировки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево трассировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Метод" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уровень" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ID" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Показывать" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КартаТрассивровки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта трассивровки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеГрафа" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные графа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийУровеньТрассировки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий уровень трассировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийЗум" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий зум</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="Трассировка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трассировка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трассировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Трассировка</Action>
+		</Command>
+		<Command name="ОбновитьКарту" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить карту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить карту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьКарту</Action>
+		</Command>
+		<Command name="ПрибавитьЗум" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить зум</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибавить зум</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрибавитьЗум</Action>
+		</Command>
+		<Command name="УбавитьЗум" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убавить зум</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убавить зум</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УбавитьЗум</Action>
+		</Command>
+	</Commands>
+</Form>
